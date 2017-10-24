@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:key="winning_score"
+        android:title="Winning Score"
+        android:summary="Score players much reach to win."
+        android:inputType="number"/>
+    <EditTextPreference
+        android:key="limit_clicks"
+        android:title="Limit number of clicks"
+        android:summary="Set max number of clicks per turn"
+        android:inputType="number"
+        />
+    <CheckBoxPreference
+        android:key="add_seventh_side"
+        android:title="add side to die"
+        android:summary="When checked dice will use 7 sides"
+        android:defaultValue="false"
+        />
+    <CheckBoxPreference
+        android:key="turn_on_AI"
+        android:title="turn computer on"
+        android:summary="When checked AI will control 2nd player"
+        android:defaultValue="false"
+        />
+
+
+
+
+
+</PreferenceScreen>

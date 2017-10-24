@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">pig</string>
+    <string name="_0">0</string>
+    <string name="player_one">Player one</string>
+    <string name="apos_s_turn">\'s turn</string>
+    <string name="menu_settings">settings</string>
+    <string name="menu_about">about</string>
+    <string name="max_category_title">Set max value</string>
+    <string name="set_max_value">set max value</string>
+    <string name="set_max_summary">this allows user to change the winning value</string>
+    <string name="default_background_title">set background image</string>
+    <string name="default_background_summary">this allows user to change background image</string>
+    <string name="background_image">image</string>
+    <string name="rounding_title">blah</string>
+    <string name="rounding_summary">waste of time</string>
+    <string name="rounding_default">ku</string>
+
+</resources>

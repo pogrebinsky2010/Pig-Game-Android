@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="talabap.edu.uoregon.pig_one.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+<!--
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/background_frame_layout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+-->
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:alpha=".35"
+            android:src="@mipmap/ic_launcher"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+   <!-- </FrameLayout>-->
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player One"
+        android:id="@+id/player_one_label"
+
+        android:layout_above="@+id/player_two_edit_text"
+        android:layout_alignRight="@+id/roll_button"
+        android:layout_alignEnd="@+id/roll_button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player Two "
+        android:id="@+id/player_two_label"
+        android:layout_above="@+id/player_two_edit_text"
+        android:layout_alignLeft="@+id/end_button"
+        android:layout_alignStart="@+id/end_button" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/player_one_edit_text"
+        android:inputType="text"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignRight="@+id/roll_button"
+        android:layout_alignEnd="@+id/roll_button" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/player_two_edit_text"
+        android:inputType="text"
+        android:layout_alignTop="@+id/player_one_edit_text"
+        android:layout_alignLeft="@+id/player_two_label"
+        android:layout_alignStart="@+id/player_two_label" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="no score yet"
+        android:id="@+id/player_one_score_text_view"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/player_one_edit_text"
+        android:layout_alignLeft="@+id/player_one_label"
+        android:layout_alignStart="@+id/player_one_label" />
+
+    <TextView
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="no score yet"
+        android:id="@+id/player_two_score_text_view"
+        android:layout_alignBottom="@+id/player_one_score_text_view"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/player_one"
+        android:id="@+id/player_id_text_view"
+        android:layout_above="@+id/die_img_view"
+        android:layout_alignRight="@+id/points_for_turn_text_view"
+        android:layout_alignEnd="@+id/points_for_turn_text_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/apos_s_turn"
+        android:id="@+id/win_label_text_view"
+        android:layout_alignTop="@+id/player_id_text_view"
+        android:layout_toRightOf="@+id/points_for_turn_text_view"
+        android:layout_toEndOf="@+id/points_for_turn_text_view" />
+
+
+    <ImageView
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:id="@+id/die_img_view"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/roll_the_dice"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Points for this turn"
+        android:id="@+id/points_label"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/die_img_view"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/points_for_turn_text_view"
+        android:layout_below="@+id/points_label"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Roll DIe"
+        android:id="@+id/roll_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="roll_die"
+        android:nestedScrollingEnabled="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEW GAME"
+        android:id="@+id/new_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/points_label"
+        android:layout_alignStart="@+id/points_label"
+        android:onClick="new_game" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="END TURN"
+        android:id="@+id/end_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/player_two_score_text_view"
+        android:layout_alignEnd="@+id/player_two_score_text_view"
+        android:onClick="end_turn" />
+
+
+
+</RelativeLayout>
